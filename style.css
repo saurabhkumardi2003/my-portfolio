@@ -1,0 +1,391 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+.animated-name {
+  margin-bottom: 2px;
+  padding: 10px 10px;
+  text-align: center;
+  background-color: #aca7a7; /* This background color will remain static */
+  background-attachment: fixed; /* This will also remain static */
+  font-size: 3em;
+  color: #ff0000; /* This color will be the default text color if the animation doesn't override it */
+}
+
+.animated-text {
+  width: 100%;
+  display: inline-block; /* Crucial for transform to work on inline elements */
+  animation: my-animation 3s ease-in-out infinite alternate; /* Apply animation to the text only */
+}
+
+@keyframes my-animation {
+  0% {
+    opacity: 0.2;
+    transform: translateX(-25%);
+  }
+  50% {
+    opacity: 1;
+    transform: translateX(0);
+    color: rgb(0, 0, 0); /* Example: Change color during animation */
+  }
+  100% {
+    opacity: 0.2;
+    transform: translateX(25%);
+  }
+}
+
+.navbar {
+  position:sticky;
+  top: 0;
+  overflow: hidden;
+  background-color: #0b0a0a;
+  margin-bottom: 2px;
+}
+
+.navbar a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  border: 1px solid #000000;
+}
+
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.navbar a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+.nav-media {
+  float: right;
+  padding: 0px 16px;
+}
+/* Buttons */
+.btn {
+    padding:10px 10px;
+    text-align: center;
+    font-size: 16px;
+    margin: 25px 25 px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #28a745;
+    color: #fff;
+}
+
+
+/* Sections */
+section {
+    padding: 20px 10px;
+}
+
+/* Home */
+.home {
+  background-color: #f9f9f9;
+  border-radius: 15px;
+  color: #000000;
+  text-align: center;
+}
+.home h1 {
+  font-size: 2.5em;
+  color: #333;
+}
+.highlight {
+  color: #27004cac;
+  font-weight: bold;
+}
+.home h2 {
+  font-size: 1.8em;
+  color: #9945e7;
+}
+
+.title{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+.title span{
+  color: #0E2431;
+  font-size: 30px;
+  font-weight: 600;
+  position: relative;
+  padding-bottom: 8px;
+  text-decoration: underline;
+  background-color: #e8f6cf;
+}
+
+
+.about{
+  width: 100%;
+  margin: 10px auto;
+  padding: 30px;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f9f9f9;
+  border-radius: 15px;
+}
+#imag{
+  width: 100%;
+  height: auto;
+  float: top-left;
+  clip-path: circle(40%);
+  shape-outside: circle(45%);
+}
+.content{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin: 40px auto;
+}
+.profile {
+    flex: 0 0 300px;
+    text-align: center;
+}
+.text {
+   flex: 1;
+   min-width: 300px;
+ }
+.text p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 25px;
+  text-align: justify;
+}
+.buton {
+  text-align: center;
+  margin-top: 20px;
+}
+button {
+  padding: 12px 30px;
+  background: linear-gradient(to right, #3498db, #9b59b6);
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.skills{
+  background-color: #f9f9f9;
+  border-radius: 15px;
+  text-align: center;
+  margin: 10px auto;
+}
+
+.boxes{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.box{
+  margin: 20px 0;
+  width: calc(100% / 3 - 20px);
+  text-align: center;
+  border-radius: 12px;
+  padding: 30px 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.12);
+  background-color: #e0ddc5;
+  overflow: auto;
+  cursor: default;
+  transition: all 0.4s ease;
+}
+.box:hover{
+  background: #ffffff;
+}
+.topic{
+  font-size: 1.9rem;
+  text-decoration: underline;
+}
+.box .icon{
+  height: 50px;
+  width: 50px;
+  background: #9945e7;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 50px;
+  font-size: 18px;
+  color: #fff;
+  margin: 0 auto 10px auto;
+  transition: all 0.4s ease;
+}
+
+.services{
+  background-color: #f9f9f9;
+  border-radius: 15px;
+  text-align: center;
+  margin: 10px auto;
+}
+.portfolio{
+  background-color: #f9f9f9;
+  border-radius: 15px;
+  text-align: center;
+  margin: 10px auto;
+}
+
+/*Contact section*/
+
+.contact{
+  background-color: #dedada;
+  border-radius: 15px;
+  text-align: center;
+  margin: 10px auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
+.container {
+  padding: 0%;
+}
+.left {
+  float: left;
+  width: 50%;
+  padding: 5%;
+}
+.info p{
+padding-left: 0%;
+font-size: 20px;
+color: blue;
+word-spacing: 5px;
+letter-spacing: 1.5px;
+text-align: left;
+}
+.container h2{
+  text-decoration: underline;
+}
+.container p{
+font-size: 18px;
+word-spacing: 5px;
+letter-spacing: 1.5px;
+}
+.dark{
+  text-decoration: solid;
+  color: #000000;
+  font-weight: bold;
+}
+.out-div{
+  clear: both;
+}
+.half{
+  float: inline-start;
+  width: auto;
+  padding: auto;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+.half p{
+  text-align: left;
+}
+/*Form section*/
+
+input[type=email]{
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+input[type=text]{
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+label{
+  padding: 8px 8px 8 px 5px;
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+@media screen and (max-width:600px) {
+   #imag{
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+}
+  .left{
+     width:100%;
+  }
+  .box{
+    width:100%;
+  }
+}
+
+
+
+/*Journey section*/
+
+.journey{
+  background-color: #f9f9f9;
+  border-radius: 15px;
+  text-align: center;
+  margin: 10px auto;
+}
+.journey h2{
+  text-decoration: underline;
+  margin: 3%;
+}
+.intern{
+  text-align: left;
+  padding-left: 7%;
+}
+
+
+/* Table section*/
+
+.tablecontainer {
+  width: 100%;
+  overflow-x: auto;
+  background-color: #f9f4f4;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1.5px solid #2c2828;
+  text-align: center;
+  overflow-x: auto;
+}
+
+th, td {
+   border: 1.5px solid #2c2828;
+   text-align: center;
+}
+td:first-child{
+   border: 1.5px solid #2c2828;
+   padding: 8px;
+   text-align: center;
+   text-decoration: underline;
+   background-color: #e0edea;
+   font-weight: bold;
+   /* overflow-x: scroll; */
+   
+}
+
+ .scroll-box {
+      width: 100%;       /* fixed width */
+      height: 62px;      /* fixed height */
+      border: 1px solid #ccc;
+      padding: 10px;
+      overflow-y: auto;   /* vertical scroll */
+      overflow-x: hidden; /* disable horizontal scroll */
+    }
+
+
